@@ -32,5 +32,17 @@ namespace Carfleet
             Assert.AreEqual(_model, _car.Model);
             Assert.AreEqual(_chassisNumber, _car.ChassisNumber);
         }
+
+        [Test]
+        public void ToString_AllProperties_GetFullString()
+        {
+            //given
+            string expectedString = "VD 123 567 - Mercedes-Benz - Vito - SV30-0169266";
+
+            //when
+
+            //then
+            Assert.AreEqual(expectedString, _car.ToString());
+        }
     }
 }

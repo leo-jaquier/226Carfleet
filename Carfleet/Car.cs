@@ -66,6 +66,11 @@ namespace Carfleet{
                 _chassisNumber = value;
             }
         }
+
+        public override string ToString()
+        {
+            //TODO
+        }
         #endregion public methods
     }
 }
