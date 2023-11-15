@@ -6,24 +6,14 @@ namespace Carfleet
     {
         static void Main(string[] args)
         {
-            #region private attributes
-            string _registration = "VD 123 567";
-            string _brand = "Mercedes-Benz";
-            string _model = "Vito";
-            string _chassisNumber = "SV30-0169266";
-            Car _car;
-            Truck _truck;
-            _car = new Car("VD 123 567", "Mercedes-Benz", "Vito", "SV42-6666666");
-            _truck = new Truck("FR 123 567","Renaud", "Vita", "SV99-9696969");
-            #endregion private attributes
+            Vehicle car = new Vehicle("VD 123 567", "Mercedes-Benz", "Vito", "SV30-0169266");
+            Truck truck = new Truck("VD 123 567", "Volvo", "FH16", "VOL45-0157966");
 
-
-
-            DisplayCar(_car);
-            DisplayTruck(_truck);
+            DisplayCar(car);
+            DisplayTruck(truck);
         }
 
-        static private void DisplayCar(Car car)
+        static private void DisplayCar(Vehicle car)
         {
             Console.WriteLine(car.ToString());
         }

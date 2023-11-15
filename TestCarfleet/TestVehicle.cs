@@ -2,21 +2,21 @@ using NUnit.Framework;
 
 namespace Carfleet
 {
-    public class TestCar
+    public class TestVehicle
     {
         #region private attributes
         string _registration = "VD 123 567";
         string _brand = "Mercedes-Benz";
         string _model = "Vito";
         string _chassisNumber = "SV30-0169266";
-        Car _car;
+        Vehicle _car;
         #endregion private attributes
 
 
         [SetUp]
         public void Setup()
         {
-            _car = new Car(_registration, _brand, _model, _chassisNumber);
+            _car = new Vehicle(_registration, _brand, _model, _chassisNumber);
         }
 
         [Test]
