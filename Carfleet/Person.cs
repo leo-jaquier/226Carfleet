@@ -24,5 +24,45 @@ namespace Carfleet
             _languages = languages;
         }
         #endregion public methods
+
+        public string Name 
+        { 
+            get 
+            { 
+                return _name; 
+            } 
+        }
+
+        public string Firstname
+        {
+            get
+            {
+                return _firstname;
+            }
+        }
+
+        public string Phonenumber
+        {
+            get
+            {
+                return _phonenumber;
+            }
+        }
+
+        public string Emailaddress
+        {
+            get
+            {
+                return _emailaddress;
+            }
+        }
+
+        public string Languages
+        {
+            get
+            {
+                return _languages ;
+            }
+        }
     }
 }
