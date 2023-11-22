@@ -57,11 +57,11 @@ namespace Carfleet
             }
         }
 
-        public string Languages
+        public List<string> Languages
         {
             get
             {
-                return _languages ;
+                return _languages;
             }
         }
     }
