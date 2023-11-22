@@ -4,6 +4,7 @@ namespace Carfleet{
     public class Truck:Vehicle
     {
         #region private attributes
+        //TODO ???
         private Boolean _isCarryingGoods = false;
         #endregion private attributes
 
@@ -20,7 +21,7 @@ namespace Carfleet{
             }
             set
             {
-                _isCarryingGoods=value;
+                _isCarryingGoods = value;
             }
         }
 

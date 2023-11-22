@@ -46,7 +46,7 @@ namespace Carfleet
         }
 
         [Test]
-        public void IsCarryningGoods_DefaultValue_GetDefaultValue()
+        public void IsCarryingGoods_DefaultValue_GetDefaultValue()
         {
             //given
 
@@ -57,7 +57,7 @@ namespace Carfleet
         }
 
         [Test]
-        public void IsCarryningGoods_SetToTrue_GetTrue()
+        public void IsCarryingGoods_SetToTrue_GetTrue()
         {
             //given
 

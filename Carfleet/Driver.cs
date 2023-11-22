@@ -3,12 +3,6 @@
     public class Driver
     {
         #region private attributes
-        private string name;
-        private string firstname;
-        private string city;
-        private string phonenumber;
-        private string emailaddress;
-        private string language;
         private string workZone;
         #endregion private attributes
 
