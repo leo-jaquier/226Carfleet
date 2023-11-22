@@ -63,6 +63,10 @@ namespace Carfleet
             {
                 return _languages;
             }
+            set
+            {
+                _languages = value;
+            }
         }
     }
 }
