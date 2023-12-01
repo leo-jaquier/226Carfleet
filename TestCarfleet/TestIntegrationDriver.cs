@@ -38,7 +38,7 @@ namespace Carfleet
             _driver.TakeAVehicle(_vehicle);
 
             //then
-            Assert.AreEqual(_vehicle.Registration, _driver.Vehicle.ChassisNumber);
+            Assert.AreEqual(_vehicle.Registration, _driver.Vehicle.Registration);
         }
     }
 }
