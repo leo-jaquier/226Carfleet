@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using System.Collections.Generic;
+using static Carfleet.Driver;
 
 namespace Carfleet
 {

@@ -7,6 +7,7 @@ namespace Carfleet
     {
         #region private attributes
         private string workZone;
+        private Vehicle vehicle;
         #endregion private attributes
 
         #region public methods
@@ -22,6 +23,34 @@ namespace Carfleet
                 return workZone;
             }
         }
+
+        public Vehicle Vehicle
+        { 
+            get 
+            { 
+                return vehicle; 
+            } 
+            set
+            { 
+                vehicle = value; 
+            }
+        }
+
+
+        public void TakeAVehicle(Vehicle vehicle)
+        {
+            if (Vehicle != vehicle) 
+            {
+                Vehicle = vehicle;
+            }
+            else
+            {
+                throw new VehicleAlreadyAssigned();
+            }
+        }
         #endregion public methods
+
+        public class DriverException : Exception { }
+        public class VehicleAlreadyAssigned : DriverException { }
     }
 }

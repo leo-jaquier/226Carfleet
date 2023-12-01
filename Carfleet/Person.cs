@@ -18,11 +18,11 @@ namespace Carfleet
         #region public methods
         public Person(string name, string firstname, string phonenumber, string emailaddress, List<string> languages)
         {
-            _name = name;
-            _firstname = firstname;
-            _phonenumber = phonenumber;
-            _emailaddress = emailaddress;
-            _languages = languages;
+            Name = name;
+            Firstname = firstname;
+            Phonenumber = phonenumber;
+            Emailaddress = emailaddress;
+            Languages = languages;
         }
         #endregion public methods
 
@@ -31,7 +31,10 @@ namespace Carfleet
             get 
             { 
                 return _name; 
-            } 
+            }
+            set {
+                _name = value; 
+            }
         }
 
         public string Firstname
@@ -39,6 +42,10 @@ namespace Carfleet
             get
             {
                 return _firstname;
+            }
+            set
+            {
+                _firstname = value;
             }
         }
 
@@ -48,6 +55,10 @@ namespace Carfleet
             {
                 return _phonenumber;
             }
+            set
+            {
+               _phonenumber = value;
+            }
         }
 
         public string Emailaddress
@@ -55,6 +66,10 @@ namespace Carfleet
             get
             {
                 return _emailaddress;
+            }
+            set
+            {
+                _emailaddress = value;
             }
         }
 
