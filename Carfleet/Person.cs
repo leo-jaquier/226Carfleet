@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO.Pipes;
+using System.Linq;
 using System.Threading;
 
 namespace Carfleet
@@ -11,11 +12,11 @@ namespace Carfleet
         private string _firstname;
         private string _phonenumber;
         private string _emailaddress;
-        private List<string> _languages;
+        private List<string> _languages = new List<string>();
         #endregion private attributes
 
         #region public methods
-        public Person(string name, string firstname, string phonenumber, string emailaddress, List<string> languages = null)
+        public Person(string name, string firstname, string phonenumber, string emailaddress, List<string> languages)
         {
             _name = name;
             _firstname = firstname;
@@ -65,7 +66,13 @@ namespace Carfleet
             }
             set
             {
-                _languages = value;
+                foreach (var language in value)
+                {
+                    if (!_languages.Contains(language))
+                    {
+                        _languages.Add(language);
+                    }
+                }
             }
         }
     }
