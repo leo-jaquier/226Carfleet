@@ -47,7 +47,7 @@ namespace Carfleet
             _driver.TakeAVehicle(_vehicle);
 
             //when
-            Assert.Throws<VehicleAlreadyAssigned>(() => _driver.TakeAVehicle(_vehicle));
+            Assert.Throws<VehicleAlreadyAssignedException>(() => _driver.TakeAVehicle(_vehicle));
 
             //then
             //throws exception
@@ -72,10 +72,10 @@ namespace Carfleet
             //given
 
             //when
-            _driver.ReleaseAVehicle();
+            Assert.Throws<NoVehicleAssignedException>(() => _driver.TakeAVehicle(_vehicle));
 
             //then
-            Assert.IsNull(_driver.Vehicle);
+            //throws exception
         }
     }
 }
