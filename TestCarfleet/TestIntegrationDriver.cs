@@ -60,7 +60,7 @@ namespace Carfleet
             _driver.TakeAVehicle(_vehicle);
 
             //when
-            _driver.ReleaseAVehicle(_vehicle);
+            _driver.ReleaseAVehicle();
 
             //then
             Assert.IsNull(_driver.Vehicle);
@@ -72,7 +72,7 @@ namespace Carfleet
             //given
 
             //when
-            _driver.ReleaseAVehicle(_vehicle);
+            _driver.ReleaseAVehicle();
 
             //then
             Assert.IsNull(_driver.Vehicle);
