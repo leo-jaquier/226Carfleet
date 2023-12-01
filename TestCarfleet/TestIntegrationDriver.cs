@@ -18,7 +18,6 @@ namespace Carfleet
         string _brand = "Mercedes-Benz";
         string _model = "Vito";
         string _chassisNumber = "SV30-0169266";
-        Vehicle _car;
         private Vehicle _vehicle;
         #endregion private attributes
 
@@ -30,7 +29,7 @@ namespace Carfleet
         }
 
         [Test]
-        public void TakeAVehicle_NominalCase_VehicleAvailableForTheDriver()
+        public void TakeAVehicle_AssignFristVehicle_VehicleAvailableForTheDriver()
         {
             //given
 
@@ -52,6 +51,31 @@ namespace Carfleet
 
             //then
             //throws exception
+        }
+
+        [Test]
+        public void ReleaseAVehicle_ReleaseVehicle_ReleaseSuccessful()
+        {
+            //given
+            _driver.TakeAVehicle(_vehicle);
+
+            //when
+            _driver.ReleaseAVehicle(_vehicle);
+
+            //then
+            Assert.IsNull(_driver.Vehicle);
+        }
+
+        [Test]
+        public void ReleaseAVehicle_NoVehicleAssigned_ThrowException()
+        {
+            //given
+
+            //when
+            _driver.ReleaseAVehicle(_vehicle);
+
+            //then
+            Assert.IsNull(_driver.Vehicle);
         }
     }
 }
