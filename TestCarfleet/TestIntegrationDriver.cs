@@ -40,5 +40,18 @@ namespace Carfleet
             //then
             Assert.AreEqual(_vehicle.Registration, _driver.Vehicle.Registration);
         }
+
+        [Test]
+        public void TakeAVehicle_VehicleAlreadyAssigned_ThrowException()
+        {
+            //given
+            _driver.TakeAVehicle(_vehicle);
+
+            //when
+            Assert.Throws<VehicleAlreadyAssigned>(() => _driver.TakeAVehicle(_vehicle));
+
+            //then
+            //throws exception
+        }
     }
 }
