@@ -7,11 +7,11 @@ namespace Carfleet
     {
         #region private attributes
         private string workZone;
-        private Vehicle vehicle;
+        private Vehicle _vehicle;
         #endregion private attributes
 
         #region public methods
-        public Driver(string name, string firstname, string phonenumber, string emailaddress, string workZone, List<string> language):base(name, firstname, phonenumber, emailaddress, language)
+        public Driver(string name, string firstname, string phonenumber, string emailaddress, string workZone, List<string> languages = null):base(name, firstname, phonenumber, emailaddress, languages)
         {
             this.workZone = workZone;
         }
@@ -28,11 +28,11 @@ namespace Carfleet
         { 
             get 
             { 
-                return vehicle; 
+                return _vehicle; 
             } 
             set
             { 
-                vehicle = value; 
+                _vehicle = value; 
             }
         }
 
@@ -57,11 +57,11 @@ namespace Carfleet
 
         public void ReleaseAVehicle()
         {
-            if (vehicle == null)
+            if (_vehicle == null)
             {
                 throw new NoVehicleAssignedException();
             }
-            vehicle = null;
+            _vehicle = null;
         }
         #endregion public methods
 
