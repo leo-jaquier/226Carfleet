@@ -26,7 +26,7 @@ namespace Carfleet
 
         #region enterprise
         private string _enterpriseName = "Friderici";
-        private string _street = "Av. de Genève 12";
+        private string _street = "Av. de GenÃ¨ve 12";
         private string _city = "1200 Lausanne";
         private string _enterprisePhonenumber = "+41 21 456 78 90";
         private string _enterpriseEmailaddress = "info@friderici.ch";
@@ -51,7 +51,7 @@ namespace Carfleet
             _enterprise.Add(_vehicule);
 
             //then
-            Assert.AreEqual(_registration, _enterprise.GetVehicleByChassisNumber(_chassisNumber).Registration
+            Assert.AreEqual(_registration, _enterprise.GetVehicleByChassisNumber(_chassisNumber).Registration);
         }
 
         [Test]
@@ -77,7 +77,7 @@ namespace Carfleet
             _entreprise.AssignVehicleToDriver(_chassisNumber, _emailaddress);
 
             //then
-            Assert.AreEqual(_registration, _enterprise.GetDriverByEmailaddress(_driverEmailaddress).Vehicle.Registration)
+            Assert.AreEqual(_registration, _enterprise.GetDriverByEmailaddress(_driverEmailaddress).Vehicle.Registration);
         }
     }
 }
